@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TechnologyRouteImport } from './routes/technology'
+import { Route as SpaceRouteImport } from './routes/space'
+import { Route as ScienceRouteImport } from './routes/science'
+import { Route as NewsRouteImport } from './routes/news'
+import { Route as LaunchesRouteImport } from './routes/launches'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AiRouteImport } from './routes/ai'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TechnologyRoute = TechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpaceRoute = SpaceRouteImport.update({
+  id: '/space',
+  path: '/space',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScienceRoute = ScienceRouteImport.update({
+  id: '/science',
+  path: '/science',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LaunchesRoute = LaunchesRouteImport.update({
+  id: '/launches',
+  path: '/launches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiRoute = AiRouteImport.update({
+  id: '/ai',
+  path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai': typeof AiRoute
+  '/contact': typeof ContactRoute
+  '/launches': typeof LaunchesRoute
+  '/news': typeof NewsRoute
+  '/science': typeof ScienceRoute
+  '/space': typeof SpaceRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai': typeof AiRoute
+  '/contact': typeof ContactRoute
+  '/launches': typeof LaunchesRoute
+  '/news': typeof NewsRoute
+  '/science': typeof ScienceRoute
+  '/space': typeof SpaceRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ai': typeof AiRoute
+  '/contact': typeof ContactRoute
+  '/launches': typeof LaunchesRoute
+  '/news': typeof NewsRoute
+  '/science': typeof ScienceRoute
+  '/space': typeof SpaceRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/ai'
+    | '/contact'
+    | '/launches'
+    | '/news'
+    | '/science'
+    | '/space'
+    | '/technology'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/ai'
+    | '/contact'
+    | '/launches'
+    | '/news'
+    | '/science'
+    | '/space'
+    | '/technology'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/ai'
+    | '/contact'
+    | '/launches'
+    | '/news'
+    | '/science'
+    | '/space'
+    | '/technology'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AiRoute: typeof AiRoute
+  ContactRoute: typeof ContactRoute
+  LaunchesRoute: typeof LaunchesRoute
+  NewsRoute: typeof NewsRoute
+  ScienceRoute: typeof ScienceRoute
+  SpaceRoute: typeof SpaceRoute
+  TechnologyRoute: typeof TechnologyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/technology': {
+      id: '/technology'
+      path: '/technology'
+      fullPath: '/technology'
+      preLoaderRoute: typeof TechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/space': {
+      id: '/space'
+      path: '/space'
+      fullPath: '/space'
+      preLoaderRoute: typeof SpaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/science': {
+      id: '/science'
+      path: '/science'
+      fullPath: '/science'
+      preLoaderRoute: typeof ScienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/launches': {
+      id: '/launches'
+      path: '/launches'
+      fullPath: '/launches'
+      preLoaderRoute: typeof LaunchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai': {
+      id: '/ai'
+      path: '/ai'
+      fullPath: '/ai'
+      preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AiRoute: AiRoute,
+  ContactRoute: ContactRoute,
+  LaunchesRoute: LaunchesRoute,
+  NewsRoute: NewsRoute,
+  ScienceRoute: ScienceRoute,
+  SpaceRoute: SpaceRoute,
+  TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
