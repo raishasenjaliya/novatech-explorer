@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NovaTech — Where Curiosity Meets Innovation" },
-      { name: "description", content: "A modern science & technology discovery platform." },
+      { title: "NovaTech | Where Curiosity Meets Innovation" },
+      { name: "description", content: "Discover curated insights on science, technology, artificial intelligence, space, and the latest innovations." },
       { name: "author", content: "NovaTech" },
-      { property: "og:title", content: "NovaTech — Where Curiosity Meets Innovation" },
-      { property: "og:description", content: "A modern science & technology discovery platform." },
+      { property: "og:title", content: "NovaTech | Where Curiosity Meets Innovation" },
+      { property: "og:description", content: "Discover curated insights on science, technology, artificial intelligence, space, and the latest innovations." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "NovaTech | Where Curiosity Meets Innovation" },
+      { name: "twitter:description", content: "Discover curated insights on science, technology, artificial intelligence, space, and the latest innovations." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b9174b12-e6b8-4b29-8bd2-adda11ad9eb3/id-preview-dfeb43b9--7f41869a-a34c-402b-a303-5fc0bd442761.lovable.app-1782674580727.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b9174b12-e6b8-4b29-8bd2-adda11ad9eb3/id-preview-dfeb43b9--7f41869a-a34c-402b-a303-5fc0bd442761.lovable.app-1782674580727.png" },
     ],
     links: [
       {
