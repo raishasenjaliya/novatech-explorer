@@ -7,9 +7,29 @@ export type Article = {
   image: string;
   whyItMatters?: string;
   futureImpact?: string;
+  content?: string[];
+  keywords?: string[];
 };
 
 const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=70`;
+
+// Fallback image used if Unsplash IDs ever fail to load.
+export const FALLBACK_IMAGE =
+  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=70";
+
+function buildContent(a: { title: string; summary: string; category: string; whyItMatters?: string; futureImpact?: string }): string[] {
+  return [
+    `${a.summary} This story, filed under ${a.category}, looks beyond the headline to examine what is actually new, what remains uncertain, and what curious readers should take away.`,
+    `Researchers and engineers behind the work emphasize that progress here did not arrive overnight. Years of incremental advances — quieter papers, failed prototypes and patient funding — set the stage for the breakthrough now making the rounds. Understanding that long arc helps separate genuine signal from hype.`,
+    a.whyItMatters
+      ? `Why it matters: ${a.whyItMatters} The practical consequences could ripple across adjacent industries, change how products are designed, and shift the questions the next generation of researchers chooses to ask.`
+      : `What stands out is how cleanly the result fits into a broader pattern: tools maturing, costs falling, and once-exotic ideas becoming everyday engineering. That is usually how transformative technology actually arrives.`,
+    a.futureImpact
+      ? `Looking ahead: ${a.futureImpact} The roadmap is not guaranteed, but the direction of travel is clear, and the teams involved are already iterating on the next version.`
+      : `Looking ahead, expect follow-up work to focus on reliability, cost and accessibility. The most exciting versions of this idea are likely still a few iterations away.`,
+    `NovaTech will keep tracking developments in ${a.category.toLowerCase()} and surface the most meaningful updates as they happen. If a topic here sparks your curiosity, explore the related sections to see how it connects to the wider landscape of science and technology.`,
+  ];
+}
 
 export const trendingArticles: Article[] = [
   { id: "t1", title: "NASA's Artemis III Targets Lunar South Pole", category: "Space", date: "Jun 24, 2026", summary: "Updated mission plan focuses on water-ice rich craters for a sustained human presence on the Moon.", image: img("photo-1446776811953-b23d57bd21aa"), whyItMatters: "Water ice could fuel future Mars missions.", futureImpact: "Foundation for a permanent lunar base by 2030." },
@@ -19,6 +39,15 @@ export const trendingArticles: Article[] = [
   { id: "t5", title: "Quantum Chip Achieves 1,000 Logical Qubits", category: "Technology", date: "Jun 15, 2026", summary: "Error-corrected qubits cross a threshold considered useful for real-world problems.", image: img("photo-1635070041078-e363dbe005cb") },
   { id: "t6", title: "James Webb Spots Possible Biosignature on K2-18b", category: "Space", date: "Jun 12, 2026", summary: "Dimethyl sulfide detection strengthens the case for a habitable ocean world.", image: img("photo-1543722530-d2c3201371e7") },
 ];
+
+// Attach generated rich content + keywords to every article collection.
+function enrich<T extends Article>(items: T[]): T[] {
+  return items.map((a) => ({
+    ...a,
+    content: a.content ?? buildContent(a),
+    keywords: a.keywords ?? [a.category, ...a.title.toLowerCase().split(/\W+/).filter((w) => w.length > 3)],
+  }));
+}
 
 export const featuredStory: Article = {
   id: "f1",
