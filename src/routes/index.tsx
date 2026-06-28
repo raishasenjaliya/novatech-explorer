@@ -61,9 +61,13 @@ function Home() {
             </div>
             <h3 className="text-2xl font-bold sm:text-3xl">{featuredStory.title}</h3>
             <p className="text-muted-foreground">{featuredStory.summary}</p>
-            <button className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90">
+            <Link
+              to="/article/$id"
+              params={{ id: featuredStory.id }}
+              className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+            >
               Read more →
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -100,6 +104,13 @@ function Home() {
                 <p className="mt-2 text-sm text-foreground/80">{todaysInnovation.futureImpact}</p>
               </div>
             </div>
+            <Link
+              to="/article/$id"
+              params={{ id: todaysInnovation.id }}
+              className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+            >
+              Read full story →
+            </Link>
           </div>
         </div>
       </section>
