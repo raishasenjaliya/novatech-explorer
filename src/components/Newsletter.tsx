@@ -4,8 +4,10 @@ export function Newsletter() {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
   return (
-    <section className="mx-auto max-w-5xl rounded-3xl border border-border bg-[image:var(--gradient-hero)] p-8 text-primary-foreground shadow-[var(--shadow-glow)] sm:p-12">
-      <div className="grid gap-6 md:grid-cols-2 md:items-center">
+    <section className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/15 bg-[image:var(--gradient-hero)] p-8 text-primary-foreground shadow-[var(--shadow-glow)] sm:p-12">
+      <div aria-hidden className="pointer-events-none absolute -top-20 -right-16 h-72 w-72 rounded-full bg-white/20 blur-3xl animate-float-slow" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-[oklch(0.7_0.2_220)]/40 blur-3xl animate-blob" />
+      <div className="relative grid gap-6 md:grid-cols-2 md:items-center">
         <div>
           <h2 className="text-2xl font-bold sm:text-3xl">Stay ahead of the curve</h2>
           <p className="mt-2 text-sm opacity-90">Weekly highlights from across science, tech, AI and space — straight to your inbox.</p>
