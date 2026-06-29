@@ -27,21 +27,26 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-95" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.28),transparent_60%)]" />
+        <div aria-hidden className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-white/20 blur-3xl animate-blob" />
+        <div aria-hidden className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-[oklch(0.7_0.2_220)]/30 blur-3xl animate-float-slow" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
         <div className="relative mx-auto max-w-7xl px-4 py-24 text-primary-foreground sm:px-6 sm:py-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] opacity-90">Where curiosity meets innovation</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] backdrop-blur-md">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" /> Where curiosity meets innovation
+          </span>
+          <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
             Discover the science and technology shaping tomorrow.
           </h1>
           <p className="mt-5 max-w-2xl text-base opacity-90 sm:text-lg">
             NovaTech curates breakthroughs across AI, space, biotech and product launches — beautifully organized for the curious mind.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/news" className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background hover:opacity-90">
-              Explore News <ArrowRight className="h-4 w-4" />
+            <Link to="/news" className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:shadow-xl">
+              Explore News <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link to="/launches" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur hover:bg-white/20">
-              <Rocket className="h-4 w-4" /> Latest Launches
+            <Link to="/launches" className="group inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-white/20">
+              <Rocket className="h-4 w-4 transition-transform group-hover:-rotate-12" /> Latest Launches
             </Link>
           </div>
         </div>

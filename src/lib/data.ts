@@ -34,7 +34,7 @@ function buildContent(a: { title: string; summary: string; category: string; why
 export const trendingArticles: Article[] = enrich([
   { id: "t1", title: "NASA's Artemis III Targets Lunar South Pole", category: "Space", date: "Jun 24, 2026", summary: "Updated mission plan focuses on water-ice rich craters for a sustained human presence on the Moon.", image: img("photo-1446776811953-b23d57bd21aa"), whyItMatters: "Water ice could fuel future Mars missions.", futureImpact: "Foundation for a permanent lunar base by 2030." },
   { id: "t2", title: "GPT-Class Model Runs Fully On-Device", category: "AI", date: "Jun 22, 2026", summary: "New 3B parameter model delivers near-cloud quality with privacy-first local inference on phones.", image: img("photo-1677442136019-21780ecad995"), whyItMatters: "Removes cloud dependency and keeps data private.", futureImpact: "Mainstream offline AI assistants on every device." },
-  { id: "t3", title: "Solid-State Batteries Hit 500 Wh/kg Milestone", category: "Technology", date: "Jun 20, 2026", summary: "A breakthrough lithium-metal architecture nearly doubles energy density for EVs.", image: img("photo-1593941707882-a5bba14938c7") },
+  { id: "t3", title: "Solid-State Batteries Hit 500 Wh/kg Milestone", category: "Technology", date: "Jun 20, 2026", summary: "A breakthrough lithium-metal architecture nearly doubles energy density for EVs.", image: img("photo-1620714223084-8fcacc6dfd8d") },
   { id: "t4", title: "CRISPR Cure for Sickle Cell Reaches Wider Rollout", category: "Science", date: "Jun 18, 2026", summary: "Gene-editing therapy approved across new markets after strong long-term results.", image: img("photo-1530026405186-ed1f139313f8") },
   { id: "t5", title: "Quantum Chip Achieves 1,000 Logical Qubits", category: "Technology", date: "Jun 15, 2026", summary: "Error-corrected qubits cross a threshold considered useful for real-world problems.", image: img("photo-1635070041078-e363dbe005cb") },
   { id: "t6", title: "James Webb Spots Possible Biosignature on K2-18b", category: "Space", date: "Jun 12, 2026", summary: "Dimethyl sulfide detection strengthens the case for a habitable ocean world.", image: img("photo-1543722530-d2c3201371e7") },
@@ -97,7 +97,7 @@ export const launches: Article[] = enrich([
   { id: "l2", title: "Helix Studio Laptop M4", category: "Laptops", date: "Jun 20, 2026", summary: "18-hour battery, OLED display, and silent fanless design.", image: img("photo-1496181133206-80ce9b88a853") },
   { id: "l3", title: "Nimbus AI Workspace", category: "AI Tools", date: "Jun 18, 2026", summary: "Unified AI canvas for writing, design and code.", image: img("photo-1620712943543-bcc4688e7485") },
   { id: "l4", title: "Lumen Health App 3.0", category: "Apps", date: "Jun 14, 2026", summary: "Sleep coaching, on-device health summaries, and a redesigned dashboard.", image: img("photo-1551288049-bebda4e38f71") },
-  { id: "l5", title: "Voltra Sky EV", category: "Electric Vehicles", date: "Jun 10, 2026", summary: "600 km range, 10-minute fast charge and a panoramic glass roof.", image: img("photo-1593941707882-a5bba14938c7") },
+  { id: "l5", title: "Voltra Sky EV", category: "Electric Vehicles", date: "Jun 10, 2026", summary: "600 km range, 10-minute fast charge and a panoramic glass roof.", image: img("photo-1560958089-b8a1929cea89") },
   { id: "l6", title: "Pulse Ring 2", category: "Wearables", date: "Jun 6, 2026", summary: "7-day battery smart ring with continuous biometrics.", image: img("photo-1523275335684-37898b6baf30") },
   { id: "l7", title: "EchoBuds Studio", category: "Consumer Electronics", date: "Jun 2, 2026", summary: "Adaptive ANC and lossless audio in a pocket case.", image: img("photo-1606220588913-b3aacb4d2f46") },
 ]);
@@ -116,7 +116,7 @@ export const technologyArticles: Article[] = enrich([
   { id: "tc1", title: "Open-Source IDE Adds Local Agent", category: "Software", date: "Jun 26, 2026", summary: "Free developer tools ship with an offline coding agent.", image: img("photo-1517694712202-14dd9538aa97") },
   { id: "tc2", title: "Warehouse Robots Hit Human Parity", category: "Robotics & Automation", date: "Jun 24, 2026", summary: "Bimanual robots match human packers in dexterity tests.", image: img("photo-1485827404703-89b55fcc595e") },
   { id: "tc3", title: "Zero-Trust Becomes the Default", category: "Cybersecurity", date: "Jun 22, 2026", summary: "Enterprises ditch VPNs for identity-based access models.", image: img("photo-1550751827-4bd374c3f58b") },
-  { id: "tc4", title: "Edge Cloud Cuts Latency To 5ms", category: "Cloud Computing", date: "Jun 20, 2026", summary: "Distributed compute brings real-time apps to every region.", image: img("photo-1451187580459-43490279c0fa") },
+  { id: "tc4", title: "Edge Cloud Cuts Latency To 5ms", category: "Cloud Computing", date: "Jun 20, 2026", summary: "Distributed compute brings real-time apps to every region.", image: img("photo-1573164713714-d95e436ab8d6") },
   { id: "tc5", title: "Foldables Now 30% of Premium Phones", category: "Consumer Technology", date: "Jun 18, 2026", summary: "Improved hinges and crease-free displays drive adoption.", image: img("photo-1512941937669-90a1b58e7e9c") },
   { id: "tc6", title: "IPv6 Adoption Crosses 60% Globally", category: "Internet & Web", date: "Jun 16, 2026", summary: "Mobile carriers lead the long-awaited transition.", image: img("photo-1558494949-ef010cbdcc31") },
   { id: "tc7", title: "Cloud Gaming Hits 4K at 120fps", category: "Gaming Technology", date: "Jun 14, 2026", summary: "New codecs make streamed games feel local.", image: img("photo-1542751371-adc38448a05e") },
@@ -132,8 +132,8 @@ export const technologyArticles: Article[] = enrich([
 export const aiArticles: Article[] = enrich([
   { id: "a1", title: "Multimodal Frontier Model Released", category: "AI Models", date: "Jun 26, 2026", summary: "Combined vision, audio and text reasoning at new state of the art.", image: img("photo-1677442136019-21780ecad995") },
   { id: "a2", title: "Generative Video Hits Hollywood Quality", category: "Generative AI", date: "Jun 22, 2026", summary: "Studios begin integrating AI shots into theatrical releases.", image: img("photo-1626814026160-2237a95fc5a0") },
-  { id: "a3", title: "Self-Supervised Models Beat Labels", category: "Machine Learning", date: "Jun 18, 2026", summary: "Unlabeled data + clever objectives match human-labeled benchmarks.", image: img("photo-1551288049-bebda4e38f71") },
-  { id: "a4", title: "Mechanistic Interpretability Breakthrough", category: "AI Research", date: "Jun 14, 2026", summary: "Researchers map circuits inside large models.", image: img("photo-1620712943543-bcc4688e7485") },
+  { id: "a3", title: "Self-Supervised Models Beat Labels", category: "Machine Learning", date: "Jun 18, 2026", summary: "Unlabeled data + clever objectives match human-labeled benchmarks.", image: img("photo-1488229297570-58520851e868") },
+  { id: "a4", title: "Mechanistic Interpretability Breakthrough", category: "AI Research", date: "Jun 14, 2026", summary: "Researchers map circuits inside large models.", image: img("photo-1507413245164-6160d8298b31") },
   { id: "a5", title: "Open AI Coding Agents Mature", category: "AI Tools", date: "Jun 10, 2026", summary: "Open-source agents reliably ship small features end-to-end.", image: img("photo-1526378722484-bd91ca387e72") },
   { id: "a6", title: "Global AI Safety Framework Signed", category: "AI Ethics", date: "Jun 6, 2026", summary: "30 nations agree on baseline evaluation requirements.", image: img("photo-1605379399642-870262d3d051") },
 ]);
@@ -145,8 +145,8 @@ export const spaceArticles: Article[] = enrich([
   { id: "sp4", title: "Gravitational Wave Hints At Cosmic Strings", category: "Deep Space Discoveries", date: "Jun 14, 2026", summary: "A persistent stochastic signal challenges current models.", image: img("photo-1502134249126-9f3755a50d78") },
   { id: "sp5", title: "Reusable Heavy Lifter Lands 100th Time", category: "Space Technology", date: "Jun 10, 2026", summary: "Booster reliability milestone slashes per-kilo launch costs.", image: img("photo-1517976487492-5750f3195933") },
   { id: "sp6", title: "10,000 Satellite Constellation Online", category: "Satellites", date: "Jun 6, 2026", summary: "New mesh networking improves global internet coverage.", image: img("photo-1614728263952-84ea256f9679") },
-  { id: "sp7", title: "Sentinel-7 Maps Methane Leaks Live", category: "Earth Observation", date: "Jun 2, 2026", summary: "Hyperspectral imagery pinpoints super-emitter facilities.", image: img("photo-1451187580459-43490279c0fa") },
-  { id: "sp8", title: "Africa's Space Agency Launches First Probe", category: "Space Agencies Worldwide", date: "May 28, 2026", summary: "Continent-wide collaboration achieves lunar orbit.", image: img("photo-1517976487492-5750f3195933") },
+  { id: "sp7", title: "Sentinel-7 Maps Methane Leaks Live", category: "Earth Observation", date: "Jun 2, 2026", summary: "Hyperspectral imagery pinpoints super-emitter facilities.", image: img("photo-1614314107768-6018061e5e3e") },
+  { id: "sp8", title: "Africa's Space Agency Launches First Probe", category: "Space Agencies Worldwide", date: "May 28, 2026", summary: "Continent-wide collaboration achieves lunar orbit.", image: img("photo-1457364887197-9150188c107b") },
 ]);
 
 export const faqs: { q: string[]; a: string }[] = [

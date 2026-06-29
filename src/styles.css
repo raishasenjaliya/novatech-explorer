@@ -152,3 +152,31 @@
     color: var(--color-foreground);
   }
 }
+
+@utility glass-panel {
+  background-color: color-mix(in oklab, var(--background) 65%, transparent);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
+}
+
+@utility glow-ring {
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--foreground) 5%, transparent) inset,
+    0 20px 60px -25px color-mix(in oklab, var(--primary) 45%, transparent);
+}
+
+@keyframes nova-float {
+  0%, 100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-14px,0); }
+}
+@utility animate-float-slow {
+  animation: nova-float 9s ease-in-out infinite;
+}
+
+@keyframes nova-blob {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(20px,-20px,0) scale(1.08); }
+}
+@utility animate-blob {
+  animation: nova-blob 14s ease-in-out infinite;
+}
